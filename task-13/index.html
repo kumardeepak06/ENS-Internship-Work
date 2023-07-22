@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        .container img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        .slick-dots li {
+            margin: 0.2rem;
+            border: 1px solid #ac9efd;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .slick-dots li button {
+            display: none;
+        }
+
+        .slick-dots li.slick-active {
+            background: #ac9efd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/b1.webp?v=1689235393" alt="slide1">
+        <img src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/b2.webp?v=1689235394" alt="Slide 2">
+        <img src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/b4.webp?v=1689235393" alt="Slide 3">
+        <img src="https://cdn.shopify.com/s/files/1/0786/9710/3635/files/b5.webp?v=1689235393" alt="Slide 4">
+    </div>
+    <div class="slide-dots"></div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".container").slick({
+                slidesToShow: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            dots: true,
+                            arrows: false,
+                            slidesToShow: 1,
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
+</body>
+
+</html>

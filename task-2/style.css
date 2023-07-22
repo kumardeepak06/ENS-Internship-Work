@@ -1,0 +1,26 @@
+.container1 {
+  background-color: rgba(250, 235, 215, 0.792);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.first-div {
+  background-color: rgba(0, 255, 255, 0.402);
+  width: 40px;
+  height: 40px; 
+}
+
+.second-div {
+  background-color: rgba(165, 42, 42, 0.58);
+  width: 40px;
+  height: 40px;
+}
+
+.third-div {
+  background-color: rgba(137, 43, 226, 0.466);
+  width: 40px;
+  height: 40px;
+}

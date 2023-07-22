@@ -1,0 +1,39 @@
+<div class="accordion" id="accordions">
+  <div class="accordion-item">
+    <h2>
+      <button class="accordionButton button" type="button">Featured Blog</button>
+    </h2>
+    <div id="collapse" style="display: none">
+      <div class="accordion-body">
+        <p>Featured blogs are present here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name":"Accordions",
+    "settings": [
+
+    ],
+    "presets":[
+    {
+      "name":"Accordions"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .showcontent{
+    display:block !important;
+  }
+</style>
+<script>
+  let button = document.querySelector(".accordionButton");
+  let content = document.getElementById("collapse");
+  button.addEventListener('click', function() {
+    content.classList.toggle("showcontent");
+  });
+</script>

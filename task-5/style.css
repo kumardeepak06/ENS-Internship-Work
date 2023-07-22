@@ -1,0 +1,38 @@
+.first-div {
+  text-align: center;
+}
+
+.first-div h2 {
+  text-align: center;
+  text-decoration: underline dotted red;
+  text-transform: uppercase;
+}
+
+.first-div p {
+  text-indent: 20px;
+  color: aqua;
+  vertical-align: text-bottom;
+}
+
+.second-div {
+  text-align: center;
+}
+
+.second-div h2 {
+  text-align: center;
+  /* text-decoration: underline dotted red; */
+  text-transform: capitalize;
+  background-color: gray;
+  color: white;
+  text-shadow: 2px 0px red;
+}
+
+.second-div p {
+  color: blue;
+  vertical-align: text-bottom;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.5;
+  word-spacing: 10px;
+  /* letter-spacing: 10px; */
+}

@@ -1,0 +1,130 @@
+*{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Courier New', Courier, monospace;
+
+}
+
+body{
+  height: 100%;
+}
+
+
+.navbar {
+  display: flex;
+  background-color: antiquewhite;
+  height: 60px;
+}
+
+.logo {
+  display: inline-block;
+  width: 50px;
+}
+.navbar-logo > img {
+  border-radius: 25%;
+  margin-left: 40%;
+  height: 50px;
+  width: 60px;
+}
+
+.nav li a:hover {
+  background-color: rgb(243, 101, 101);
+  text-decoration: underline;
+  color: green;
+  border-radius: 10px;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  justify-content: left;
+}
+
+.search-box {
+  display: flex;
+}
+
+.search-icon {
+  border: 2px solid rgb(247, 224, 195);
+  border-radius: 4px;
+  margin-left: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.social-page {
+  display: flex;
+  width: 100px;
+  height: 10px;
+  justify-content: space-evenly;
+}
+
+img {
+  display: flex;
+  height: 20px;
+  width: 20px;
+}
+
+/* .cusnav ul li a:hover{
+    background-color: red;
+    color: green;
+} */
+
+.linkedin a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.linkedin:hover {
+  transform: scale(1.5);
+}
+
+.facebook a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.facebook:hover {
+  transform: scale(1.5);
+}
+
+.instagram a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.instagram:hover {
+  transform: scale(1.5);
+}
+
+.twitter a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.twitter:hover {
+  transform: scale(1.5);
+}
