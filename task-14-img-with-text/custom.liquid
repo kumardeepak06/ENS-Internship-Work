@@ -1,0 +1,76 @@
+<div class="box">
+  <div class="container">
+    <div class="image">
+      <img
+        src="{{ section.settings.image | img_url: 'master'}}"
+        loading="lazy"
+        width="360px"
+        height="400px"
+        alt="Loading Image"
+      >
+    </div>
+    <div class="img-text">
+      <p>{{ section.settings.text }}</p>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom_text_alignment",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Image"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text On Image"
+    },
+    {
+      "type": "select",
+      "id": "text-align",
+      "label": "Text Alignment",
+      "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+      {
+      "value": "center",
+      "label": "Center"
+    }
+  ],
+  "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom-text-alignment"
+    }
+  ]
+}
+{% endschema %}
+{% style %}
+  .box {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    position: relative;
+  }
+  .img-text {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+{% endstyle %}

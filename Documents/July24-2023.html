@@ -1,0 +1,69 @@
+<!-- name:-  The name attribute determines the section title that is shown in the theme editor. -->
+
+<!--
+      tag:-By default, when Shopify renders a section, it’s wrapped in a <div> element with a unique id attribute:
+      If you don’t want to use a <div>, then you can specify which kind of HTML element to use with the tag attribute.
+      The following are the accepted values:
+      article
+      aside
+      div
+      footer
+      header
+      section
+    -->
+
+<!--
+      class:-
+      When Shopify renders a section, it’s wrapped in an HTML element with a class of shopify-section.
+        You can add to that class with the class attribute:
+    -->
+
+<!--
+      limit:
+      By default, there's no limit to how many times a section can be added to a template or section group.
+        You can specify a limit of 1 or 2 with the limit attribute:
+    -->
+
+<!--
+    "settings"
+You can create section specific settings to allow merchants to customize the section with the settings object: 
+Like This-------------
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    }
+  ]
+}
+{% endschema %}
+
+-->
+
+<!-- 
+    block:
+    You can create blocks for a section. 
+    Blocks are reusable modules of content that can be added, removed, and reordered within a section.
+    Blocks have the following attributes:
+    type- The block type. This is a free-form string that you can use as an identifier. You can access this value through the type attribute of the block object.
+    name- The block name, which will show as the block title in the theme editor.
+    limit- The number of blocks of this type that can be used.
+    settings- Any input or sidebar settings that you want for the block. Certain settings might be used as the title of the block in the theme editor.
+ -->
+
+<!--  
+    max_blocks:
+    There’s a limit of 50 blocks per section. 
+    You can specify a lower limit with the max_blocks attribute:
+ -->
+
+<!-- 
+    presets:
+    Presets are default configurations of sections that enable users to easily add a section to a JSON template through the theme editor. 
+    Presets aren't related to theme styles that are defined in settings_data.json.
+ -->
