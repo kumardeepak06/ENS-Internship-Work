@@ -67,3 +67,54 @@ Like This-------------
     Presets are default configurations of sections that enable users to easily add a section to a JSON template through the theme editor. 
     Presets aren't related to theme styles that are defined in settings_data.json.
  -->
+
+<!-- 
+    default:
+    If you statically render a section, then you can define a default configuration with the default object, which has the same attributes as the preset object.
+  -->
+
+<!-- locales:
+    Sections can provide their own set of translated strings through the locales object. 
+    This is separate from the locales directory of the theme, which makes it a useful feature for sections that are meant to be installed on multiple themes or shops.
+    SYNTAX-
+    =====================================
+    	"locales": {
+    "en": {
+      "title": "Slideshow"
+    },
+    "fr": {
+      "title": "Diaporama"
+    }
+  }
+  ========================================
+   -->
+
+<!--
+    enabled_on: 
+    You can restrict a section to certain template page types and section group types by specifying them through the enabled_on attribute.
+    enabled_on, along with disabled_on, replaces the templates attribute.
+    --------------------------------------------
+    disabled_on:
+    You can prevent a section from being used on certain template page types and section group types by setting them in the disabled_on attribute.
+    When you use disabled_on, the section is available to all templates and section groups except the ones that you specified.
+    disabled_on, along with enabled_on, replaces the templates attribute.
+------------------------------------------------------------
+Both must have at least one of the following attributes:
+        Attribute	    Description
+    1    templates       A list of the template page types where the section can't be used.
+        Accepted values:   
+        A list of page types
+        ["*"] (all template page types)
+        
+    2    groups	        A list of the section groups where the section can't be used.
+        Accepted values:
+        A list of the section group types. Accepted values: header, footer, aside, and custom types in the format custom.<NAME>.
+        ["*"] (all section group types)
+        Caution You can use only one of enabled_on or disabled_on.
+ -->
+
+<!-- 
+    app blocks: 
+    If your section is part of a JSON template or section group, then you should support blocks of type @app.
+    App blocks allow app developers to create blocks for merchants to add app content to their theme without having to directly edit theme code.
+ -->
