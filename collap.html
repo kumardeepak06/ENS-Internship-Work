@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .collapsible1 {
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #707070;
+            margin: 10px 15px;
+            padding-bottom: 5px;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 18px;
+        }
+
+
+
+        .collapsible1:hover {
+            color: #a99ef6;
+            border-bottom: 4px solid #a99ef6;
+        }
+
+        .collapsible1:active {
+            color: #a99ef6;
+            border-bottom: 4px solid #a99ef6;
+        }
+
+        .collapsible2 {
+            text-transform: uppercase;
+            cursor: pointer;
+            color: #707070;
+            margin: 10px 15px;
+            padding-bottom: 5px;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 18px;
+        }
+
+    
+        .collapsible2:hover {
+            color: #a99ef6;
+            border-bottom: 4px solid #a99ef6;
+        }
+
+        .collapsible2:active {
+            color: #a99ef6;
+            border-bottom: 4px solid #a99ef6;
+        }
+
+        .nayaClass1 {
+
+            display: grid !important;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+        }
+
+        .nayaClass2 {
+            /* max-height: 1024px !important;
+            display: block !important; */
+            display: grid !important;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+        }
+
+        .content1 {
+            padding: 0 18px;
+            background-color: white;
+            overflow: hidden;
+            display: none;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .content2 {
+            padding: 0 18px;
+            background-color: white;
+            overflow: hidden;
+            display: none;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .content2 .products {
+            padding-right: 16px;
+            padding-bottom: 16px;
+        }
+
+        .cards {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 360px;
+            margin: 10px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .cards a {
+            text-decoration: none;
+        }
+
+        .price {
+            color: grey;
+            font-size: 22px;
+        }
+
+        .cards .buttons {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cards .shop-now {
+            border: none;
+            outline: 0;
+            padding: 10px;
+            color: white;
+            background-color: #33FF92;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 14px;
+            border-radius: 25px;
+        }
+
+        .cards .addtocart {
+            border: none;
+            outline: 0;
+            padding: 10px;
+            color: white;
+            background-color: #FF6C33;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 14px;
+            border-radius: 25px;
+        }
+
+        .cards button:hover {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <span class="collapsible1 active" id="collapsible-title">
+            BESTSELLERS
+        </span>
+        <span class="collapsible2 active" id="collapsible-title">
+            REGIME KITS
+        </span>
+    </div>
+
+    <div class="content1">
+        <!-- {% for product in section.settings.collection1.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>123</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+
+    </div>
+
+    <div class="content2">
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+        <!-- {% for product in section.settings.collection2.products %} -->
+        <div class="products">
+            <div class="cards">
+                <a href="#">
+                    <img src="google.jpg" alt="{{ product.title }}" height="" width="" style="width:100%"
+                        loading="lazy">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                </a>
+                <p>124</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nostrum voluptatem molestias
+                    illo quaerat, repellendus harum magni ratione illum, voluptatibus soluta aliquid eius
+                    maiores sunt vero ex ipsum error quos doloremque ut laborum. Modi, laudantium laborum?
+                    Distinctio ut voluptatibus sapiente ipsa, placeat dolorem quia iure dignissimos rerum totam
+                    blanditiis exercitationem illum voluptatem animi hic quibusdam nemo facere. Nihil, maxime
+                    cum, magnam cumque beatae recusandae quae nostrum reprehenderit facere laborum aspernatur
+                    veritatis magni? Voluptatem libero, aspernatur sit dignissimos odit quae consequatur
+                    praesentium laborum. Aut ipsam voluptatibus a expedita, doloribus facere quod sit numquam
+                    aspernatur consequatur at nisi porro placeat sequi totam alias odio quidem pariatur aliquid
+                    illum ea vel corporis atque deserunt.</p>
+                <section class="buttons">
+                    <p><button class="shop-now">Shop Now</button></p>
+                    <p><button class="addtocart">Add To Cart</button></p>
+                </section>
+            </div>
+        </div>
+        <!-- {% endfor %} -->
+    </div>
+
+    <script>
+        document.querySelector(".collapsible1").addEventListener("click", function () {
+            document.querySelector(".content1").classList.toggle('nayaClass1')
+        });
+        document.querySelector(".collapsible2").addEventListener("click", function () {
+            document.querySelector(".content2").classList.toggle('nayaClass2')
+        });
+    </script>
+
+</body>
+
+</html>

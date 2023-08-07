@@ -1,0 +1,171 @@
+:root{
+  --color1: blueviolet;
+  --color2: black;
+  --color3: pink;
+}
+
+/* .navbar{
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+} */
+/* .logo {
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+.logo img{
+  border-radius: 40%;
+  height: 30px;
+  width: 30px;
+} */
+
+body{
+  margin: 0;
+}
+
+.header{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(191, 244, 244);
+  background-color: var(--color3);
+  margin: 0;
+  padding: 0;
+  height: 50px;
+}
+.header-menu a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: var(--color2);
+  font-size: 16px;
+  font-weight: 200;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header-menu a:hover {
+  margin-left: 40px;
+  border-bottom: 1px solid red;
+  color: var(--color1);
+}
+
+/* Dropdown button */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropdown-button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--color2);
+  background-color: var(--color3);
+  font-size: 16px;
+  margin-left: 40px;
+  font-weight: 200;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.dropdown .dropdown-button:hover {
+  margin-left: 40px;
+  border-bottom: 1px solid red;
+  width: max-content;
+  color: var(--color1);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(229, 245, 239, 0.178);
+}
+
+.dropdown-content a {
+  float: none;
+  color: var(--color2);
+  /* color: brown; */
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  margin-left: 40px;
+  /* border-bottom: 1px solid red; */
+  width: max-content;
+  color: var(--color1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Social page link */
+/* .social-page {
+  margin-right: 10px;
+  display: flex;
+  width: 10px;
+  height: 10px;
+  justify-content: space-evenly;
+}
+
+.linkedin a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.linkedin:hover {
+  transform: scale(1.5);
+}
+
+.facebook a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.facebook:hover {
+  transform: scale(1.5);
+}
+
+.instagram a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.instagram:hover {
+  transform: scale(1.5);
+}
+
+.twitter a:hover {
+  padding: 1px;
+  transition: transform 0.2s;
+
+  width: 2px;
+  height: 2px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.twitter:hover {
+  transform: scale(1.5);
+} */

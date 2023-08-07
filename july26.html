@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #6acbdf;
+        }
+        :root {
+            --fontsize: 15px;
+            --font-size-base: 14px;
+            --fontfamily: 'Europa_Regular';
+            --font-weight: 200;
+            --color1: #707070;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+
+        li a {
+            color: var(--color1);
+            font-size: var(--font-size-base);
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: rgb(51, 176, 243);
+        }
+
+        .dropdown-menu {
+            overflow: hidden;
+
+
+        }
+
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            width: 60%;
+            left: 28%;
+            margin-top: 2px;
+            box-shadow: 0px 8px 16px 0px rgba(121, 121, 121, 0.2);
+            border-radius: 2px;
+            z-index: 1;
+            background-color: #fff;
+            min-height: max-content;
+        }
+
+        .dropdown-menu:hover .menu-dropdown {
+            display: block;
+        }
+
+        .menu-dropdown-child h3 {
+            color: var(--color1);
+            font-size: var(--fontsize);
+            font-weight: normal;
+            display: block;
+        }
+
+        .column1 {
+            float: left;
+            width: 50%;
+            padding: 5px;
+            background-color: #fff;
+            /* height: 250px;    */
+        }
+
+        .column2 {
+            float: right;
+            width: 50%;
+            padding: 5px;
+            background-color: #fff;
+            /* height: 250px; */
+        }
+
+        .column1 a {
+            float: none;
+            color: var(--color1);
+            font-size: var(--font-size-base);
+            padding: 2px;
+            text-decoration: none;
+            display: block;
+            /* text-align: left; */
+        }
+
+
+
+        .stages {
+            display: grid;
+            grid-template-columns: auto auto;
+            flex: 3 1 0%;
+            grid-row-gap: 1.5em;
+        }
+
+
+        .column2 a {
+            float: none;
+            color: var(--color1);
+            font-size: var(--font-size-base);
+            padding: 2px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .stages .stage {
+            height: 50px;
+            width: 100px;
+            min-height: max-content;
+            margin: 5px 5px 5px 0;
+            color: var(--color1);
+            position: relative;
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight);
+            font-family: var(--fontfamily);
+            text-align: start;
+            padding: 8px;
+        }
+
+        .stages #stage-1 {
+            background-color: #6acbdf;
+        }
+
+        .stages #stage-2 {
+            background-color: #ff767d;
+        }
+
+        .stages #stage-3 {
+            background-color: #26dea6;
+        }
+
+        .stages #stage-4 {
+            background-color: #ffb25b;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="menu-link">
+            <a href="#">Acne Care Quiz</a>
+        </li>
+        <li class="menu-link dropdown-menu">
+            <a href="#">Shop Now</a>
+            <ul class="menu-dropdown">
+                <li class="menu-dropdown-child ">
+                    <h3>
+                        Shop by Category
+                    </h3>
+                    <ul class="menu-dropdown-grandchild column1">
+                        <li><a href="#">Moisturizer</a></li>
+                        <li><a href="#">Cleanser</a></li>
+                        <li><a href="#">Toner</a></li>
+                        <li><a href="#">Serum</a></li>
+                        <li><a href="#">Oil</a></li>
+                        <li><a href="#">Weekly Booster</a></li>
+                    </ul>
+                </li>
+                <li class="menu-dropdown-child">
+                    <h3>
+                        Shop by Stage On Acne Care
+                    </h3>
+                    <ul class="menu-dropdown-grandchild column2 stages">
+                        <li><a class="stage" id="stage-1" href="#"><span>STAGE 1 <br> Acne Prone</span></a></li>
+                        <li><a class="stage" id="stage-2" href="#"><span>STAGE 2 <br> Clogged Pores</span></a></li>
+                        <li><a class="stage" id="stage-3" href="#"><span>STAGE 3 <br> Breakout</span></a></li>
+                        <li><a class="stage" id="stage-4" href="#"><span>STAGE 4 <br> Post-Breakout</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-link">
+            <a href="#">Origin Story</a>
+        </li>
+        <li class="menu-link">
+            <a href="#">Acne Knowledge</a>
+        </li>
+    </ul>
+</body>
+
+</html>
