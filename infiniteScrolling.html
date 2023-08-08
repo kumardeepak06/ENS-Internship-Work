@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Infinite Scrolling Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      padding: 20px;
+    }
+    .item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    let currentPage = 1;
+    const itemsPerPage = 10000;
+    let isLoading = true;
+
+    // Function to fetch new data
+    function fetchData() {
+      isLoading = true;
+      // Simulate an API call or load data from your data source
+      setTimeout(() => {
+        const data = [];
+        for (let i = 0; i < itemsPerPage; i++) {
+          data.push(`<div class="item">Item ${(currentPage - 1) * itemsPerPage + i}</div>`);
+        }
+        isLoading = false;
+        currentPage++;
+        displayData(data);
+      }, 1000); // Simulating API call with a delay of 1 second
+    }
+
+    // Function to append new data to the container
+    function displayData(data) {
+      const container = document.getElementById('container');
+      data.forEach(item => {
+        const newItem = document.createElement('div');
+        newItem.innerHTML = item;
+        container.appendChild(newItem);
+      });
+    }
+
+    // Event listener to check for scrolling to the bottom of the page
+    window.addEventListener('scroll', () => {
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+      // Check if the user has reached the bottom and if data is not already loading
+      if (scrollTop + clientHeight >= scrollHeight - 5 && !isLoading) {
+        fetchData();
+      }
+    });
+
+    // Initial data load
+    fetchData();
+  </script>
+</body>
+</html>

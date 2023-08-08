@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="c">sssss
+        <div class="card-home">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+        </div>
+        </div>
+</body>
+</html>
+
+<style>
+    .c{
+  position:relative;
+  background:red;
+  max-height:200px;
+  float:left;
+  width:400px;
+  height:600px;
+  overflow:hidden;
+  overflow-y:auto;
+}
+.card-home{
+  position:absolute;
+  margin:20px;
+	top:0;
+  	animation: scroll 5s linear 1s infinite;
+}
+span {
+  min-width:300px;
+  min-height:40px;
+  display:block;
+  color:white;
+  margin:5px;
+  background:blue;
+}
+@keyframes scroll {
+	100% { top: -100%; }
+}
+</style>
