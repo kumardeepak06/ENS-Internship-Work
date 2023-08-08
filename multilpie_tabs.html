@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #tab-1,
+      #tab-2,
+      #tab-3 {
+        font-size: 18px;
+      }
+      ul.tabs {
+        
+        display: block;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+      ul.tabs li {
+        display: block;
+        float: left;
+        height: 30px;
+        margin-left: 2px;
+        padding: 0;
+        width: auto;
+      }
+      ul.tabs li a {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background: none repeat scroll 0 0 #f5f5f5;
+        border-color: lightgray !important;
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        display: block;
+        font-size: 18px;
+        height: 29px;
+        line-height: 30px;
+        margin: 0;
+        padding: 0 20px;
+        text-decoration: none;
+        width: auto;
+        color: #303030;
+        border-bottom: none !important;
+      }
+      ul.tabs li a.active {
+        border-left-width: 1px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        background: none repeat scroll 0 0 #ffdada;
+        color: #131313;
+        height: 30px;
+        margin: 0 0 0 -1px;
+        padding-top: 4px;
+        position: relative;
+        top: -4px;
+      }
+      ul.tabs li:first-child a.active {
+        margin-left: 0;
+      }
+      ul.tabs li:first-child a {
+        border-top-left-radius: 2px;
+        border-width: 1px 1px 0;
+      }
+      ul.tabs li:last-child a {
+        border-top-right-radius: 2px;
+      }
+      ul.tabs:before,
+      ul.tabs:after {
+        content: " ";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+      }
+      ul.tabs:after {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product__description rte quick-add-hidden">
+      <div>
+        <ul class="tabs">
+          <li><a href="#tab-1">Product Description</a></li>
+          <li><a href="#tab-2">Specification</a></li>
+          <li><a href="#tab-3">Return Policies</a></li>
+        </ul>
+        <div id="tab-1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque,
+          vitae.
+        </div>
+        <div id="tab-2">Hello world</div>
+        <div id="tab-3">
+          <p data-mce-fragment="1">
+            We have a 30-day return policy, which means you have 30 days after
+            receiving your item to request a return.<br
+              data-mce-fragment="1"
+            /><br data-mce-fragment="1" />To be eligible for a return, your item
+            must be in the same condition that you received it, unworn or
+            unused, with tags, and in its original packaging. You’ll also need
+            the receipt or proof of purchase.<br data-mce-fragment="1" /><br
+              data-mce-fragment="1"
+            />To start a return, you can contact us at<span
+              data-mce-fragment="1"
+              >&nbsp;</span
+            ><a
+              data-mce-fragment="1"
+              href="mailto:shubham.sharma@ens.enterprises"
+              data-mce-href="mailto:shubham.sharma@ens.enterprises"
+              >shubham.sharma@ens.enterprises</a
+            >. Please note that returns will need to be sent to the following
+            address: [INSERT RETURN ADDRESS]<br data-mce-fragment="1" /><br
+              data-mce-fragment="1"
+            />If your return is accepted, we’ll send you a return shipping
+            label, as well as instructions on how and where to send your
+            package. Items sent back to us without first requesting a return
+            will not be accepted.<br data-mce-fragment="1" /><br
+              data-mce-fragment="1"
+            />You can always contact us for any return question at<span
+              data-mce-fragment="1"
+              >&nbsp;</span
+            ><a
+              data-mce-fragment="1"
+              href="mailto:shubham.sharma@ens.enterprises"
+              data-mce-href="mailto:shubham.sharma@ens.enterprises"
+              >shubham.sharma@ens.enterprises</a
+            >.
+          </p>
+          <br data-mce-fragment="1" />
+          <p data-mce-fragment="1">
+            <strong data-mce-fragment="1">Damages and issues</strong
+            ><br data-mce-fragment="1" />Please inspect your order upon
+            reception and contact us immediately if the item is defective,
+            damaged or if you receive the wrong item, so that we can evaluate
+            the issue and make it right.
+          </p>
+          <br data-mce-fragment="1" />
+          <p data-mce-fragment="1">
+            <strong data-mce-fragment="1"
+              >Exceptions / non-returnable items</strong
+            ><br data-mce-fragment="1" />Certain types of items cannot be
+            returned, like perishable goods (such as food, flowers, or plants),
+            custom products (such as special orders or personalized items), and
+            personal care goods (such as beauty products). We also do not accept
+            returns for hazardous materials, flammable liquids, or gases. Please
+            get in touch if you have questions or concerns about your specific
+            item.<br data-mce-fragment="1" /><br
+              data-mce-fragment="1"
+            />Unfortunately, we cannot accept returns on sale items or gift
+            cards.
+          </p>
+          <br data-mce-fragment="1" />
+          <p data-mce-fragment="1">
+            <strong data-mce-fragment="1">Exchanges</strong
+            ><br data-mce-fragment="1" />The fastest way to ensure you get what
+            you want is to return the item you have, and once the return is
+            accepted, make a separate purchase for the new item.
+          </p>
+          <br data-mce-fragment="1" />
+          <p data-mce-fragment="1">
+            <strong data-mce-fragment="1"
+              >European Union 14 day cooling off period</strong
+            ><br data-mce-fragment="1" />Notwithstanding the above, if the
+            merchandise is being shipped into the European Union, you have the
+            right to cancel or return your order within 14 days, for any reason
+            and without a justification. As above, your item must be in the same
+            condition that you received it, unworn or unused, with tags, and in
+            its original packaging. You’ll also need the receipt or proof of
+            purchase.
+          </p>
+          <br data-mce-fragment="1" />
+          <p data-mce-fragment="1">
+            <strong data-mce-fragment="1">Refunds</strong
+            ><br data-mce-fragment="1" />We will notify you once we’ve received
+            and inspected your return, and let you know if the refund was
+            approved or not. If approved, you’ll be automatically refunded on
+            your original payment method within 10 business days. Please
+            remember it can take some time for your bank or credit card company
+            to process and post the refund too.<br data-mce-fragment="1" />If
+            more than 15 business days have passed since we’ve approved your
+            return, please contact us at shubham.sharma@ens.enterprises.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("ul.tabs").each(function () {
+          let active,
+            content,
+            links = $(this).find("a");
+          active = links.first().addClass("active");
+          content = $(active.attr("href"));
+          links.not(":first").each(function () {
+            $($(this).attr("href")).hide();
+          });
+          $(this)
+            .find("a")
+            .click(function (e) {
+              active.removeClass("active");
+              content.hide();
+              active = $(this);
+              content = $($(this).attr("href"));
+              active.addClass("active");
+              content.show();
+              return false;
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
