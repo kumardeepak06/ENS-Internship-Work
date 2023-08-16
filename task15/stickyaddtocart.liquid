@@ -1,0 +1,266 @@
+{%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+{% assign current_variant = product.selected_or_first_available_variant %}
+<div class="stickyAddtoCart">
+  <div class="stAdWrapper">
+    <p class="titleText">
+      <img src="{{ featured_image | img_url: '40x' }}" alt="{{ featured_image.alt | escape }}">
+      <b>
+        {{ product.title }}
+      	<span class="modal_price1 stPrice">
+          <span content="{{ variant.price | money_without_currency }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
+            <span class="current_price1 {% if product.available == false %}hidden{% endif %}">
+              {% if variant.price > 0 %}
+              <span class="money">{{ variant.price | money }}</span>
+              {% else %}
+              {{ settings.free_price_text }}
+              {% endif %}
+            </span>
+          </span>
+          <span class="was_price compairprice">
+            {% if variant.price < variant.compare_at_price and variant.available %}
+            <span class="money">{{ variant.compare_at_price | money }}</span>
+            {% endif %}
+          </span>
+        </span>
+      </b>
+    </p>
+    <div class="stAdRight">
+      <form action="/cart/add" method="post" class="stickyAddtocart optionsize{{product.options.size}} ">
+        {% if product.available %}
+        {% assign variant = product.selected_or_first_available_variant %}
+        {% if product.options.size > 1 %}
+          <select name="id" id="productSelect">
+            {%- for variant in product.variants -%}
+            <option selected="selected" value="{{ variant.id }}">{{ variant.title }}</option>
+            {%- endfor -%}
+          </select>
+        {% elsif product.options.size == 1 and product.options[0] != "Title" %}
+          <select name="id" id="productSelect">
+            {%- for variant in product.variants -%}
+              <option selected="selected" value="{{ variant.id }}">{{ variant.title }}</option>
+            {%- endfor -%}
+          </select>
+          {% else %}
+            <input type="hidden" name="id" value="{{ variant.id }}" />
+          {% endif %}
+        {% endif %}
+        <select name="quantity" id="quantity" class="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        
+        <p class="modal_price1 stPrice">
+          <span content="{{ variant.price | money_without_currency }}" class="{% if variant.compare_at_price > variant.price %}sale{% endif %}">
+            <span class="current_price1 {% if product.available == false %}hidden{% endif %}">
+              {% if variant.price > 0 %}
+              <span class="money">{{ variant.price | money }}</span>
+              {% else %}
+              {{ settings.free_price_text }}
+              {% endif %}
+            </span>
+          </span>
+          <span class="was_price compairprice">
+            {% if variant.price < variant.compare_at_price and variant.available %}
+            <span class="money">{{ variant.compare_at_price | money }}</span>
+            {% endif %}
+          </span>
+        </p>
+        
+        <button id="AddToCart" type="submit" {% unless product.available %} disabled="disabled"{% endunless %} class="triggerMainPro addtocart" data-label={{ add_to_cart_label | json }}>
+          {%- if product.available -%}
+          	Add to Cart
+          {%- else -%}
+          	Sold Out
+          {%- endif -%}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<style>
+  .stickyAddtoCart {
+	 position: fixed;
+	 width: 100%;
+	 background: #fff;
+	 z-index: 999;
+	 box-shadow: 0 0 8px #ddd;
+	 -webkit-box-shadow: 0 0 8px #ddd;
+	 top: inherit !important;
+	 top: 0 !important;
+	 display: none;
+}
+ .stickyAddtoCart .stAdWrapper {
+	 display: flex;
+	 display: -webkit-flex;
+	 justify-content: space-between;
+	 -webkit-justify-content: space-between;
+	 align-items: center;
+	 padding-left: 25px;
+	 padding-top: 5px;
+	 padding-bottom: 5px;
+	 padding-right: 25px;
+}
+ .stickyAddtoCart .stAdWrapper span {
+	 font-size: 14px;
+	 vertical-align: middle;
+	 display: inline-block;
+}
+ .stickyAddtoCart .stAdWrapper .selector-wrapper {
+	 display: inline-block;
+}
+ .stickyAddtoCart .stAdWrapper .selector-wrapper .single-option-selector {
+	 margin-bottom: 0;
+	 padding-right: 24px;
+}
+ .stickyAddtoCart .stAdWrapper .selector-wrapper label {
+	 display: none;
+}
+ .stickyAddtoCart .stAdWrapper .stickyAddtocart {
+	 margin-bottom: 0;
+}
+ .stickyAddtoCart .stAdWrapper select.quantity {
+	 width: auto;
+	 display: inline-block;
+	 margin-bottom: 0;
+	 padding-right: 25px;
+}
+ .stickyAddtoCart .titleText .modal_price1 {
+	 display: none;
+}
+ .stickyAddtoCart .titleText img {
+	 display: inline-block;
+	 vertical-align: middle;
+	 margin-right: 10px;
+}
+ .stickyAddtoCart p {
+	 color: #000;
+	 margin: 0;
+	 font-size: 16px;
+	 text-transform: uppercase;
+}
+ .stickyAddtoCart .stPrice {
+	 display: inline-block;
+	 padding-right: 15px;
+}
+ .stickyAddtoCart .triggerMainPro {
+	 display: inline-block;
+	 border-radius: 0;
+	 text-transform: uppercase;
+	 cursor: pointer;
+}
+ .stickyAddtoCart .optionsize2 .selector-wrapper:first-child {
+	 margin-right: 10px;
+}
+ button.add_to_cart {
+	 font-size: 20px;
+}
+ @media (max-width: 768px) {
+	 .stickyAddtoCart .stAdWrapper {
+		 display: block;
+		 max-width: 320px;
+		 margin: 0 auto;
+		 font-size: 12px;
+		 padding-left: 5px;
+		 padding-right: 5px;
+	}
+	 .stickyAddtoCart .stAdWrapper .titleText {
+		 margin-bottom: 3px;
+		 font-size: 12px;
+	}
+	 .stickyAddtoCart .stAdWrapper .titleText .modal_price1 {
+		 display: block;
+	}
+	 .stickyAddtoCart .stAdWrapper .titleText img {
+		 float: left;
+	}
+	 .stickyAddtoCart .stAdWrapper .titleText b {
+		 float: left;
+		 width: calc(100% - 50px);
+	}
+	 .stickyAddtoCart .stAdWrapper .titleText:before, .stickyAddtoCart .stAdWrapper .titleText:after {
+		 clear: both;
+		 content: '';
+		 display: block;
+	}
+	 .stickyAddtoCart .stAdWrapper .stAdRight .modal_price1.stPrice {
+		 display: none;
+	}
+	 .stickyAddtoCart .stAdWrapper .selector-wrapper .single-option-selector, .stickyAddtoCart .stAdWrapper select.quantity {
+		 font-size: 12px;
+	}
+	 .stickyAddtoCart .stAdWrapper .triggerMainPro {
+		 display: block;
+		 margin-top: 3px;
+		 width: 100%;
+	}
+	 .stickyAddtoCart .stAdWrapper .stickyAddtocart {
+		 text-align: center;
+	}
+	 .stickyAddtoCart .optionsize2 .selector-wrapper {
+		 max-width: calc(50% - 5px);
+		 width: 100%;
+	}
+	 .stickyAddtoCart .optionsize2 .selector-wrapper:first-child {
+		 margin-right: 10px;
+	}
+	 .stickyAddtoCart .optionsize2 .quantity {
+		 margin-top: 3px;
+	}
+	 .stickyAddtoCart .optionsize2 .triggerMainPro {
+		 display: inline-block;
+		 width: calc(100% - 51px);
+	}
+}
+ 
+</style>
+<script>
+      jQuery(document).ready(function(jQuery){
+        
+        $(window).scroll(function() {  
+          var adb = $('#atc').offset().top+50;                    
+          var hh = $('.site-header').height()+1;
+          $(".stickyAddtoCart").css('top',hh+'px');
+          var scroll = $(window).scrollTop();
+          if (scroll >= adb) {
+            $(".stickyAddtoCart").slideDown();
+          } else {
+            $(".stickyAddtoCart").slideUp();
+          }
+        });
+        
+        var selectCallback = function(variant, selector) {
+          var mf = "{{ shop.money_format }}";
+          if (variant && variant.available) {
+            jQuery('#AddToCart').removeAttr('disabled').removeClass('disabled').find('span').text('ADD TO CART'); 
+            if(variant.price < variant.compare_at_price){
+              jQuery('.current_price1').html(Shopify.formatMoney(variant.price, mf));
+              $('.compairprice').html(Shopify.formatMoney(variant.compare_at_price, mf));
+            } else {
+              jQuery('.current_price1').html(Shopify.formatMoney(variant.price, mf));
+            }
+          } else {
+            jQuery('#AddToCart').addClass('disabled').attr('disabled', 'disabled').find('span').text('COMING SOON'); 
+          }
+          if(variant){
+            if(variant && variant.featured_image != null){
+              var img_src = Shopify.resizeImage(variant.featured_image.src,'40x');
+              $('.stickyAddtoCart .titleText img').attr('src',img_src);
+            }     
+          }
+        };
+        
+        
+        new Shopify.OptionSelectors("productSelect", { product: {{ product | json }}, onVariantSelected: selectCallback, enableHistoryState: false });
+
+        {% if product.options.size == 1 and product.options.first != 'Title' %}
+          jQuery('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first | escape }}</label>');
+        {% endif %}                                       
+      });
+    </script>

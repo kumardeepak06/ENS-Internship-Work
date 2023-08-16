@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Infinite Scrolling</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #content {
+        padding: 20px;
+        position: absolute;
+        margin: 20px;
+        top: 0;
+        animation: scroll 8s linear 0.5s infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: -100%;
+        }
+      }
+      .item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <!-- Items will be appended here -->
+    </div>
+
+    <script>
+      const content = document.getElementById("content");
+      let pageNumber = 1;
+      const itemsPerPage = 31;
+
+      function loadMoreItems() {
+        // Simulated API call or data source
+        const simulatedData = Array.from(
+          { length: itemsPerPage },
+          (_, index) => {
+            return `<div class="item">Item ${
+              index + (pageNumber - 1) * itemsPerPage
+            }</div>`;
+          }
+        );
+
+        // Append the new items to the content div
+        content.insertAdjacentHTML("beforeend", simulatedData.join(""));
+
+        pageNumber++;
+      }
+
+      function handleScroll() {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        if (scrollTop + clientHeight >= scrollHeight - 100) {
+          loadMoreItems();
+        }
+      }
+
+      // Initial load
+      loadMoreItems();
+
+      // Attach scroll event listener
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>

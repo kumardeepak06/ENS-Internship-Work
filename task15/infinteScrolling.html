@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load More Scrolling Example</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .content {
+        position: absolute;
+        margin: 20px;
+        top: 0;
+        animation: scroll 8s linear .5s infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          top: 0;
+        }
+        100% {
+          top: -100%;
+        }
+      }
+
+      .item {
+        width: 300px;
+        padding: 20px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content"></div>
+      <div class="loading"><img src="Spinner-5.gif" alt="Loading More" /></div>
+    </div>
+    <script>
+      const content = document.querySelector(".content");
+      const loading = document.querySelector(".loading");
+
+      let pageNum = 1;
+      let isLoading = false;
+
+      function fetchItems() {
+        isLoading = true;
+        loading.style.display = "block";
+
+        // Simulate fetching data from an API
+        setTimeout(() => {
+          const newItems = Array.from(
+            { length: 20 },
+            (_, index) => `<div class="item">New Item ${index + 1}</div>`
+          );
+          content.innerHTML += newItems.join("");
+
+          isLoading = false;
+          loading.style.display = "none";
+        }, 500);
+      }
+
+      function handleScroll() {
+        const { scrollTop, clientHeight, scrollHeight } =
+          document.documentElement;
+
+        if (isLoading) {
+          return;
+        }
+
+        if (scrollTop + clientHeight >= scrollHeight - 10) {
+          pageNum++;
+          fetchItems();
+        }
+      }
+
+      fetchItems(); // Load initial items
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>
