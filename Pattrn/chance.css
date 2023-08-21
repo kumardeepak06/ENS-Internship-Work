@@ -1,0 +1,115 @@
+.hairRecover_alert {
+  color: #000;
+  font-weight: 700;
+  line-height: 133.1%;
+  font-size: 50px;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+.hairRecoverStages {
+  background: #ffd1c0;
+  padding-bottom: 80px;
+}
+/* .recoverImg{
+  width: 174.082px;
+    height: 173.742px;
+  } */
+.recoverInfo {
+  display: flex;
+  gap: 30px;
+}
+.insideHRS {
+  margin: 0px 60px;
+}
+.recoverDuration {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 144.1%;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.recoverTitle {
+  border-radius: 26px;
+  background: white;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 144.1%;
+  padding: 0 25px;
+  color: black;
+}
+.recover___describe {
+  color: #000;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 122.6%;
+}
+.success_line {
+  color: #1e1e1e;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 105.1%;
+}
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.successBar {
+  border: 0px solid #fff;
+  width: 80%;
+  height: 30px;
+  position: relative;
+}
+.successBar::-webkit-progress-bar {
+  border-radius: 52px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.successBar::-webkit-progress-value {
+  background-color: #01474b;
+}
+.successBar::-webkit-progress-value::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -125%;
+}
+
+.successBar::before {
+  content: url("/Pattrn/assets/Group 41.png");
+  position: absolute;
+  left: -28px;
+  top: -88px;
+}
+.successBar::after {
+  content: url("/Pattrn/assets/Group 40.png");
+  position: absolute;
+  right: 82px;
+  top: -88px;
+}
+
+.successStart {
+  color: #e91d24;
+  font-family: Titillium Web;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  position: absolute;
+  left: 180px;
+  top: 206px;
+}
+.successEnd {
+  color: #01474b;
+  font-family: Titillium Web;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  position: absolute;
+  right: 314px;
+  top: 206px;
+}

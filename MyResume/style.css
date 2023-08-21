@@ -1,0 +1,563 @@
+body {
+  margin: 50px;
+  font-family: sans-serif;
+  font-size: 30px;
+  padding: 1px;
+}
+/* Back to top */
+
+/* Body Header */
+
+#body-header {
+  height: 65vh;
+  opacity: 0.8;
+  background-image: url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 1.2rem;
+}
+
+/* Horizontal Lists */
+
+.horizontal-list {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.horizontal-list li {
+  display: inline-block;
+  margin: 0px 8px 8px 0px;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.horizontal-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu li a {
+  transition: color 0.5s, border-bottom 4s;
+}
+
+.nav-menu li a:hover {
+  color: lightgrey;
+  border-bottom: 1px solid black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Name and Social Icons*/
+
+#name-social-container {
+  margin-top: 20vh;
+}
+
+#my-name {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons li {
+  border-radius: 50%;
+}
+
+.social-icons li a i:hover {
+  box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+.social-icons li a i {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 1rem;
+}
+
+/* Section */
+section {
+  width: 100%;
+  /* height: 75vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-child(2n + 1) {
+  background-color: rgb(255, 255, 255);
+}
+
+.section-heading {
+  width: auto;
+  padding: 20px 10px 10px;
+  margin: 10px auto;
+  font-weight: 400;
+}
+
+.section-heading span {
+  font-size: 40px;
+  color: #2857a4;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+
+/* About Section */
+#about {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+#about-para {
+  padding: 10px;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  color: grey;
+  line-height: 28px;
+  font-weight: 100;
+  font-size: 1.1rem;
+}
+
+#my-image {
+  width: 12rem;
+  height: 12rem;
+  margin: auto;
+  margin-top: -10vh;
+}
+
+#my-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 6px lightgray;
+}
+
+p {
+  color: grey;
+}
+
+p mark {
+  background-color: white;
+  color: #2857a4;
+}
+
+/* Skills section */
+
+#skills {
+  background-color: lightgray;
+}
+
+.skills-display {
+  width: 80%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+.skill-progress {
+  width: 7rem;
+  height: 1.4rem;
+  background-color: rgb(181, 179, 179);
+  border-radius: 0.8rem;
+  border: 1px solid rgba(190, 188, 188, 0.76);
+}
+
+.skill-progress > div {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name {
+  font-size: 15px;
+  color: white;
+  padding: 6px 0 10px 20px;
+}
+
+.skill-name span {
+  margin: 0;
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  width: 75%;
+  /* border: 2px solid black; */
+  margin-left: 15%;
+}
+
+.timeline-box {
+  position: relative;
+  margin: 5px;
+  width: 40%;
+  left: 5%;
+  min-height: 150px;
+  /* border: 2px solid black; */
+}
+
+.timeline-box:nth-child(2n) {
+  left: 53%;
+}
+
+.timeline-box:nth-child(2n + 1)::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 30%;
+  right: -13%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+.timeline-box:nth-child(2n)::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 30%;
+  left: -9%;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: lightgray;
+  z-index: 1;
+}
+
+.timeline-divider {
+  position: absolute;
+  height: 75%;
+  width: 0;
+  border: 3px dashed #0096fa6b;
+  top: 10%;
+  left: 50%;
+}
+
+.timeline-traveller {
+  position: sticky;
+  color: #2857a4;
+  top: 1%;
+  /* bottom: 1%; */
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
+/* Experience */
+.work > h4 {
+  color: #2857a4;
+  text-align: end;
+  font-size: 30px;
+  font-family: "Times New Roman";
+  line-height: 10%;
+}
+
+.work > h4::before {
+  content: "";
+  background-image: url("codingninjaslogo.jpg");
+  display: block;
+  margin-left: 10px;
+  border-radius: 28%;
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+  line-height: 1%;
+}
+
+.work > h5 {
+  color: rgb(255, 111, 0);
+  text-align: end;
+  font-size: 25px;
+  font-family: "Times New Roman";
+  line-height: 10%;
+}
+
+.work > h6 {
+  color: lightgray;
+  text-align: end;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 10%;
+}
+
+.work > p {
+  color: lightgrey;
+  text-align: justify;
+  margin: 10px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Education */
+#education {
+  height: auto;
+  width: auto;
+  background-color: rgb(251, 248, 248);
+}
+
+.educations > h4 {
+  color: #2857a4;
+  text-align: end;
+  margin-right: 10px;
+  margin-top: 1px;
+  font-family: "Times New Roman";
+  font-size: 30px;
+  line-height: 10%;
+}
+
+.educations > h4::before {
+  content: "";
+  background-image: url("iiitd.jpg");
+  /* display: inline-block;     */
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 30px;
+  width: 60px;
+  background-size: cover;
+}
+
+.educations > h5 {
+  color: rgb(255, 111, 0);
+  text-align: end;
+  margin-right: 10px;
+  font-size: 25px;
+  font-family: "Times New Roman";
+  line-height: 1%;
+}
+
+.educations > h6 {
+  color: lightgrey;
+  text-align: end;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: "Times New Roman";
+  line-height: 1%;
+}
+
+.educations > p {
+  color: lightgrey;
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+
+/* Portfolio Section */
+
+.project-detail {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 40px;
+  text-align: center;
+  transition: 2s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease;
+  background: rgba(226, 223, 223, 0.797);
+  border: #a9c5f399 3px solid;
+}
+
+.project-detail:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-display > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-progress {
+  width: 30%;
+}
+
+/* Common Margin Classes */
+.mb75px {
+  margin-bottom: 75px;
+}
+
+/* Common Color Classes */
+.text-highlight {
+  color: #2857a4;
+  font-weight: 600;
+}
+
+.mb-blue {
+  background-color: #2857a4;
+}
+
+.mb-orange {
+  background-color: orangered;
+}
+
+.mb-violet {
+  background-color: rgb(246, 14, 246);
+}
+
+/* Percentage Classes */
+.eighty-five-percent {
+  width: 85%;
+  height: inherit;
+}
+
+.eighty-percent {
+  width: 80%;
+  height: inherit;
+}
+
+.seventy-percent {
+  width: 70%;
+  height: inherit;
+}
+
+.fourty-five-percent {
+  width: 45%;
+  height: inherit;
+}
+
+.fifty-five-percent {
+  width: 55%;
+  height: inherit;
+}
+
+.fifty-percent {
+  width: 50%;
+  height: inherit;
+}
+
+/* Contact Section */
+.contact {
+  height: auto;
+  width: auto;
+  background: linear-gradient(#2857a4, #403066);
+}
+
+.contact-title {
+  color: white;
+  font-size: 20px;
+  font-family: "Segoe UI";
+}
+
+.contact > h1 > span {
+  color: white;
+  font-size: 40px;
+  align-items: center;
+  font-family: "Segoe UI";
+}
+
+.contact-display {
+  display: flex;
+}
+
+.feedback {
+  width: 40%;
+  height: auto;
+  color: lightgrey;
+  border: none;
+  margin-left: 10%;
+}
+
+.feedback > form > input {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 3px solid lightgrey;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.feedback > form > textarea {
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 3px solid lightgrey;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.feedback > form > button {
+  width: auto;
+  height: 2rem;
+  margin-left: 40%;
+  margin-bottom: 1rem;
+  border: 2px solid lightgrey;
+  border-radius: 10%;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Aside */
+.aside {
+  display: flexbox;
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 40%;
+  height: auto;
+}
+
+.aside > p {
+  color: lightgrey;
+  text-align: justify;
+  font-size: 20px;
+  font-family: "Segoe UI";
+}
+
+.aside > ul > li {
+  list-style: none;
+  align-items: start;
+  color: lightgrey;
+  font-size: 20px;
+  margin-top: 0.2rem;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-family: "Segoe UI";
+  display: flex;
+}
+
+.aside > ul > li > i {
+  color: white;
+  margin-right: 10px;
+  margin-top: 5px;
+  display: flex;
+}

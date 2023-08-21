@@ -1,0 +1,68 @@
+.hairLoss_alert{
+    color: #FFF;
+    font-weight: 700;
+    line-height: 133.1%;
+     font-size: 50px;
+    margin-top: 0px;
+    padding-top: 50px;
+  }
+  .hairLossStages{
+        background: #01474B;
+    padding-bottom:80px;
+  }
+  .scalpImg{
+    width: 174.082px;
+    height: 173.742px;
+    /* border: 2px solid red; */
+    border-radius: 50%;
+  }
+
+  #firstContainer{
+    position: relative;
+
+  }
+  .scalpImg .firstImage{
+    z-index: 1;
+  }
+ .scalpImg .location{
+    position: absolute;
+    top: -85px;
+    left: 35%;
+    z-index: 1;
+  }
+
+  .stageInfo{
+    display: flex;
+    gap:30px;
+  }
+  .insideHLS{
+    margin: 0px 60px;
+  }
+  .p__age{
+    color: #FF8C90;
+text-align: center;
+font-size: 30px;
+font-weight: 600;
+line-height: 144.1%;
+    margin-top: 10px;
+margin-bottom: 0;
+  }
+.stagingNumber{
+ width: 174px;
+height: 39px;
+border-radius: 26px;
+background: red;
+font-size: 30px;
+font-weight: 600;
+line-height: 144.1%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.staging___describe{
+color: #FFF;
+font-size: 24px;
+font-weight: 300;
+line-height: 122.6%;
+}
