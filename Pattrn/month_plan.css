@@ -1,0 +1,104 @@
+body {
+  font-family: Titillium Web;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#first-plan {
+  text-transform: uppercase;
+  background-color: #01474b;
+  border-radius: 50px;
+  width: 16%;
+}
+
+#second-plan {
+  text-transform: uppercase;
+  background-color: #ffb79d;
+  border-radius: 50px;
+  position: relative;
+  width: 27%;
+  right: 5%;
+  z-index: 1;
+}
+
+.buyOnePlan {
+  display: inline-block;
+  text-align: center;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.buyThreePlan {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.buyThreeDiscount {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #01474b;
+}
+
+@media screen and (max-width: 1024px) {
+  #first-plan {
+    width: 27%;
+  }
+
+  #second-plan {
+    width: 33%;
+    right: 12%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    #first-plan {
+      width: 36%;
+    }
+  
+    #second-plan {
+      width: 45%;
+      right: 16%;
+    }
+  }
+  
+
+
+@media screen and (max-width: 600px) {
+  #main-container {
+    width: 90%;
+  }
+  #first-plan {
+    width: 70%;
+  }
+
+  #second-plan {
+    width: 76%;
+    right: 16%;
+  }
+
+  
+.buyOnePlan {
+    margin-left: 20px;
+    font-size: 10px;
+  }
+  
+  .buyThreePlan {
+    font-size: 10px;
+  }
+  
+  .buyThreeDiscount {
+    font-size: 9px;
+  }
+  
+}

@@ -1,0 +1,229 @@
+header {
+  width: 100%;
+  margin: 0;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 10px; */
+  background-color: #fff;
+  /* border-bottom: 1px solid black; */
+  height: 55%;
+}
+
+.header-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul .mycontent a span {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: "skolar-sans-latin", sans-serif;
+  padding: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "skolar-sans-latin", sans-serif;
+  /* margin: 8px; */
+  padding: 5px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right div {
+  margin: 10px;
+}
+
+.mega-menu__content {
+  display: none;
+}
+.mycontent .dropdown-menu {
+  position: relative;
+  border: 1px solid transparent;
+  transition: 0.3s all;
+}
+.mycontent .dropdown-menu a:hover {
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+.mega-menu__content .customSize ul li a {
+  color: black;
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display: block;
+  /* text-align: left; */
+}
+
+.mega-menu__content .dropdown-menu:hover {
+  display: block;
+}
+.mycontent:hover .mega-menu__content {
+  display: block;
+  position: absolute;
+  /* top: 20%; */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #f4e4d7;
+  z-index: 1;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.level3_list li link:hover {
+  color: rgb(53, 52, 52);
+}
+
+summary {
+  list-style: none;
+}
+
+.customSize {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.customSize .level3_list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0 4rem;
+  flex-direction: column;
+}
+
+#MegaMenu-Content-4 .customSize .mega-menu__list .list-unstyled {
+  flex-direction: column;
+}
+
+#MegaMenu-Content-5 .customSize .list-unstyled {
+  flex-direction: column;
+}
+
+.mega-menu__link {
+  color: #000;
+  display: block;
+  font-size: 1rem;
+  font-family: "skolar-sans-latin", sans-serif;
+  text-decoration: none;
+  transition: text-decoration 0.1s ease;
+  /* word-wrap: break-word; */
+}
+
+.mycontent .mega-menu__content .customSize .mega-menu__list {
+  width: 50%;
+}
+
+.megamenu__banner__image {
+  padding: 1.5rem 0 1rem 1.5rem;
+  border-left: 1px solid #f4e4d7;
+  width: 50%;
+}
+.link .badge-new {
+  background: #e8cdb6;
+  padding: 0 1px 1px;
+  text-transform: capitalize;
+  font-size: 11px;
+  font-family: "skolar-sans-latin", sans-serif;
+  line-height: 1;
+  display: inline-block;
+}
+
+[href="https://www.mcaffeine.com/collections/all"] span
+{
+  background-color: #04a998;
+  color: #fff;
+  padding: 12px 8px;
+}
+
+[href="https://www.mcaffeine.com/collections/all"] span:hover
+{
+  border: 1px solid black;
+}
+
+.rewards-container {
+  display: none;
+}
+
+.reward__container-wrapper .reward_block {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: "skolar-sans-latin", sans-serif;
+  margin: 8px;
+  padding: 5px;
+}
+.rewards-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 2px 10px;
+}
+
+.reward__container-wrapper:hover .rewards-container {
+  display: block;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.rewards-container a {
+  padding: 10px 0;
+  text-align: center;
+  letter-spacing: normal;
+  display: inline-block;
+  width: 100%;
+  line-height: 1.7;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.rewards-container a:hover {
+  background-color: #eceaeabe;
+  cursor: pointer;
+}
+
+.loyalty-points {
+  font-weight: 700;
+  font-size: 10px;
+  color: #000;
+}
+
+.banner-media {
+  /* max-width: 100%; */
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.countdown-message_list {
+  /* position: relative; */
+  padding: 10px;
+  margin: 0;
+  background-color: #f9cb9c;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}

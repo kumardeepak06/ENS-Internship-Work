@@ -1,0 +1,248 @@
+/* Main Section class */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.treatmentKit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  height: 713px;
+}
+/* Kit Container */
+.kitContainer {
+  background-color: #fff;
+  width: 375px;
+  height: 564px;
+  margin: 10px;
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Kit Title Image on the top */
+.kitTitle {
+  position: absolute;
+  top: -7%;
+  left: 12%;
+}
+/* for last image */
+.kitTitleImage4 {
+  position: absolute;
+  top: -7%;
+  left: 20%;
+}
+
+/* kit image inside the container */
+.kitImage {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: -8%;
+  height: 290px;
+}
+
+.kitImage img {
+  position: relative;
+}
+
+.kitDescription {
+  height: 33%;
+}
+
+/* Kit description heading */
+.kitDescription h1 {
+  font-family: Titillium Web;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 45px;
+}
+
+/* Kit Description Paragraph */
+.kitDescription > p {
+  font-family: Titillium Web;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 30px;
+}
+
+/* Kit List topics */
+.kitList {
+  list-style-type: square;
+  margin-left: 10%;
+  margin-top: 2%;
+  font-family: Titillium Web;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 14.4px;
+  /* letter-spacing: 3.5%; */
+}
+
+td {
+  padding: 3px;
+}
+
+/* kit Price */
+.price {
+  font-family: Corben;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+}
+hr {
+  width: 80%;
+  border: 0.5px solid #d9d9d9;
+}
+
+
+@media screen and (max-width: 1023px) and (min-width: 601px){
+  .treatmentKit {
+    overflow-x: auto;
+    width: fit-content !important;
+  }
+
+  .treatmentKit::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .kitContainer {
+    width: 300px;
+    height: 564px;
+  }
+
+  .kitTitle img {
+    /* width: 274px; */
+    height: 54.96px;
+  }
+
+  .kitTitle {
+    position: absolute;
+    top: -4%;
+    left: 19%;
+    z-index: 1;
+  }
+
+  .kitTitleImage4 {
+    position: absolute;
+    top: -4%;
+    left: 23%;
+  }
+
+  .kitImage {
+    text-align: center;
+    height: 290px;
+    margin-top: 6%;
+    margin-bottom: -3%;
+  }
+  .kitImage img {
+    width: 260px;
+    height: 315px;
+  }
+
+  .kitDescription {
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+  }
+
+  .kitDescription h1 {
+    padding: 0;
+  }
+
+  .kitDescription > p {
+    margin: 0 -2px;
+  }
+
+  .kitList {
+    margin-left: 4%;
+    margin-top: 6%;
+  }
+
+  td {
+    padding: 4px;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .treatmentKit {
+    overflow-x: auto;
+    width: fit-content !important;
+  }
+
+  .treatmentKit::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .kitContainer {
+    width: 300px;
+    height: 609px;
+  }
+
+  .kitTitle img {
+    /* width: 274px; */
+    height: 54.96px;
+  }
+
+  .kitTitle {
+    position: absolute;
+    top: -4%;
+    left: 19%;
+    z-index: 1;
+  }
+
+  .kitTitleImage4 {
+    position: absolute;
+    top: -4%;
+    left: 23%;
+  }
+
+  .kitImage {
+    text-align: center;
+    height: 290px;
+    margin-top: 6%;
+    margin-bottom: -3%;
+  }
+  .kitImage img {
+    width: 260px;
+    height: 315px;
+  }
+
+  .kitDescription {
+    /* display: flex; */
+    position: relative;
+    z-index: 1;
+    padding: 0 12px;
+  }
+
+  .kitDescription h1 {
+    padding: 0;
+  }
+
+  .kitDescription > p {
+    margin: 0 -2px;
+  }
+
+  .kitList {
+    margin-left: 4%;
+    margin-top: 6%;
+  }
+
+  td {
+    padding: 4px;
+  }
+
+  .kitContainer .price {
+    font-family: Corben;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,72 @@
+.announcement-body {
+  background-color: black;
+  width: auto;
+  height: 45px;
+  line-height: 45px;
+}
+
+.announcement-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+button {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background: #a99ef6;
+  font-size: 0;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+button.slick-prev.slick-arrow::before,
+button.slick-next.slick-arrow::before {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 18px;
+  border-radius: 45%;
+}
+
+.slick-prev,
+.slick-next {
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-prev::before {
+  content: "\21E6";
+}
+
+.slick-next::before {
+  content: "\21E8";
+}
+
+button.slick-prev.slick-arrow {
+  left: 80px;
+  z-index: 99;
+}
+
+button.slick-next.slick-arrow {
+  right: 80px;
+  z-index: 99;
+}
